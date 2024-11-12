@@ -4,41 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arif Rakhmanov</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            margin-top: 3rem;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .header h2 {
+            color: #64ffda;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+        }
+
+        .header p {
+            max-width: 600px;
+            margin-top: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .nav {
+            margin-top: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #8892b0;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #64ffda;
+        }
+
+        .experience-section {
+            margin-top: 4rem;
+        }
+
+        .experience {
+            margin-bottom: 3rem;
+        }
+
+        .experience h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0;
+            color: #ccd6f6;
+        }
+
+        .experience h4 {
+            color: #64ffda;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 0.5rem;
+        }
+
+        .experience p {
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .tags {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #112240;
+            color: #64ffda;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        footer a {
+            color: #8892b0;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        footer a:hover {
+            color: #64ffda;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <div class="container">
+        <div class="header">
+            <h1>Arif Rakhmanov</h1>
+            <h2>Software Developer</h2>
+            <p>I create beautiful and accessible digital experiences for the web, with a focus on clean, user-friendly interfaces.</p>
+        </div>
+        
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
         </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Arif Rakhmanov, a passionate junior developer with expertise in Java, Spring Framework, and Python.</p>
-    </section>
-
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="https://github.com/arifrakhmanov/ecommerce-project">E-commerce Platform</a></li>
-            <li><a href="https://github.com/arifrakhmanov/task-manager">Task Manager System</a></li>
-            <li><a href="https://github.com/arifrakhmanov/python-scraper">Python Web Scraper</a></li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:arifrakhmanov@gmail.com">arifrakhmanov@gmail.com</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Arif Rakhmanov. All Rights Reserved.</p>
-    </footer>
+        
+        <section class="experience-section" id="experience">
+            <div class="experience">
+                <h3>Senior Frontend Engineer, Accessibility &middot; Company Name</h3>
+                <h4>2023 &mdash; Present</h4>
+                <p>Leading the development of accessible and performant web components, ensuring high standards of quality and user experience across the product.</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Storybook</span>
+                </div>
+            </div>
+            <div class="experience">
+                <h3>Lead Engineer &middot; Company Name</h3>
+                <h4>2020 &mdash; 2023</h4>
+                <p>Built and maintained highly reliable and scalable websites for a variety of clients including universities, startups, and non-profits.</p>
+                <div class="tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </footer>
+    </div>
 </body>
 </html>
