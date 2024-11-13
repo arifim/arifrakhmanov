@@ -122,4 +122,40 @@ window.addEventListener('scroll', () => {
     }
     
     lastScrollY = window.scrollY;
+});
+
+// Add this to your existing script.js
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+const body = document.body;
+
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.classList.add('nav-overlay');
+body.appendChild(overlay);
+
+// Toggle menu
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    body.style.overflow = body.style.overflow === 'hidden' ? '' : 'hidden';
+});
+
+// Close menu when clicking overlay
+overlay.addEventListener('click', () => {
+    mobileMenuBtn.classList.remove('active');
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.style.overflow = '';
+});
+
+// Close menu when clicking nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    });
 }); 
