@@ -4,164 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arif Rakhmanov</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #0a192f;
-            color: #ccd6f6;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .header {
-            margin-top: 3rem;
-        }
-
-        .header h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .header h2 {
-            color: #64ffda;
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-top: 0.5rem;
-        }
-
-        .header p {
-            max-width: 600px;
-            margin-top: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .nav {
-            margin-top: 2rem;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #8892b0;
-            font-weight: 400;
-            transition: color 0.3s;
-        }
-
-        .nav a:hover {
-            color: #64ffda;
-        }
-
-        .experience-section {
-            margin-top: 4rem;
-        }
-
-        .experience {
-            margin-bottom: 3rem;
-        }
-
-        .experience h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            color: #ccd6f6;
-        }
-
-        .experience h4 {
-            color: #64ffda;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-top: 0.5rem;
-        }
-
-        .experience p {
-            margin-top: 1rem;
-            line-height: 1.6;
-        }
-
-        .tags {
-            margin-top: 1rem;
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background-color: #112240;
-            color: #64ffda;
-            padding: 0.4rem 0.8rem;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        footer {
-            margin-top: 5rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        footer a {
-            color: #8892b0;
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
-
-        footer a:hover {
-            color: #64ffda;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Arif Rakhmanov</h1>
-            <h2>Software Developer</h2>
-            <p>I create beautiful and accessible digital experiences for the web, with a focus on clean, user-friendly interfaces.</p>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#" class="fade-in">Arif Rakhmanov</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-        </nav>
-        
-        <section class="experience-section" id="experience">
-            <div class="experience">
-                <h3>Senior Frontend Engineer, Accessibility &middot; Company Name</h3>
-                <h4>2023 &mdash; Present</h4>
-                <p>Leading the development of accessible and performant web components, ensuring high standards of quality and user experience across the product.</p>
-                <div class="tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Storybook</span>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content slide-up">
+            <h1>Hello, I'm <span class="highlight">Arif Rakhmanov</span></h1>
+            <p class="typewriter">Full Stack Developer | Designer | Creator</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about fade-in">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I am a passionate and detail-oriented Junior Developer with a strong background in computer science and hands-on experience in 
+                    Java, Spring framework, and C++. I am committed to creating clean, efficient, and well-documented code. 
+                    My enthusiasm for learning and problem-solving drives me to tackle challenges and continuously improve my skills. 
+                    I have a solid foundation in software development principles and am eager to contribute to a collaborative team environment 
+                    where I can grow and make a meaningful impact.
+    
+                </p>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div class="skill-bars">
+                    <div class="skill">
+                        <span>HTML/CSS</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <span>React</span>
+                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                    </div>
                 </div>
             </div>
-            <div class="experience">
-                <h3>Lead Engineer &middot; Company Name</h3>
-                <h4>2020 &mdash; 2023</h4>
-                <p>Built and maintained highly reliable and scalable websites for a variety of clients including universities, startups, and non-profits.</p>
-                <div class="tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
+        </div>
+    </section>
+
+<!--     <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project Title</h3>
+                    <p>Project description goes here</p>
+                    <a href="#" class="btn">View Project</a>
                 </div>
             </div>
-        </section>
-        
-        <footer>
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-        </footer>
-    </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section> -->
+
+    <section id="contact" class="contact fade-in">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect</h3>
+                <p>Feel free to reach out for collaborations or just a friendly hello</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>arif.rakhmanov@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (201) 588-0701</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>New York</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <span class="border-line-bottom"></span>
+                    <span class="border-line-left"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <span class="border-line-bottom"></span>
+                    <span class="border-line-left"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" placeholder="Subject" required>
+                    <span class="border-line-bottom"></span>
+                    <span class="border-line-left"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <span class="border-line-bottom"></span>
+                    <span class="border-line-left"></span>
+                </div>
+                <button type="submit" class="btn primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Arif Rakhmanov. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
