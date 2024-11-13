@@ -23,25 +23,38 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background-color: rgba(10, 10, 10, 0.95);
-    padding: 1rem 0;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
     z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Add this class for scrolled state */
+nav.scrolled {
+    background: rgba(var(--bg-color-rgb), 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav.hidden {
+    transform: translateY(-100%);
 }
 
 .nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 1rem 2%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .logo a {
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -51,13 +64,13 @@ nav {
 }
 
 .nav-links a {
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
-    transition: var(--transition);
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: #4CAF50;
 }
 
 /* Hero Section */
@@ -176,6 +189,64 @@ h2 {
 
 .project-info {
     padding: 1.5rem;
+}
+
+.project-tech {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.project-links .btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-links .btn i {
+    font-size: 1.2rem;
+}
+
+.project-links .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+}
+
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 /* Contact Section */
@@ -434,3 +505,37 @@ h2 {
 }
 
 /* Add this to your JavaScript to handle the cursor-following effect */
+
+.btn.outline-green {
+    background: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.btn.outline-green:hover {
+    background: #4CAF50;
+    color: white;
+}
+
+.nav-resume-btn {
+    border: 2px solid #4CAF50;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #4CAF50 !important;
+}
+
+.nav-resume-btn:hover {
+    background: #4CAF50;
+    color: white !important;
+}
+
+.nav-resume-btn i {
+    margin-right: 5px;
+}
+
+/* Ensure the first section starts below the navbar */
+#home {
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+}

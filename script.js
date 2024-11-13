@@ -99,4 +99,27 @@ document.querySelector('.contact-form button.btn').addEventListener('mouseleave'
     if (light) {
         light.style.opacity = '0';
     }
+});
+
+let lastScrollY = window.scrollY;
+const nav = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    // Add scrolled class for styling when not at top
+    if (window.scrollY === 0) {
+        nav.classList.remove('scrolled');
+    } else {
+        nav.classList.add('scrolled');
+    }
+
+    // Handle hiding/showing based on scroll direction
+    if (lastScrollY < window.scrollY && window.scrollY > 100) {
+        // Scrolling down & not at top
+        nav.classList.add('hidden');
+    } else {
+        // Scrolling up or at top
+        nav.classList.remove('hidden');
+    }
+    
+    lastScrollY = window.scrollY;
 }); 
